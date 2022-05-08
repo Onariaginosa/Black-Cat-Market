@@ -1,0 +1,26 @@
+<div class="page-container" style="display: flex; justify-content: center;">
+  <div class="page-body" 
+    style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    {% if error %}
+    <p style="color: red">{{ error }}</p>
+    {% endif %}
+    <h1>... who is it?</h1>
+    <form method="post" action="/login"
+      style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <p>Codename: <input type="text" name="codename" /></p>
+      <p>Password: <input type="password" name="password" /></p>
+      <p><input type="submit" value="Login" id="submit" /></p>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    </form>
+    <div id="loading-cat" 
+      style="display: none; justify-content: center;" >
+      <img src="{{url_for('static', filename='loading-cat.gif')}}" style="width:100px; height:100px;"/>
+    </div>
+    {% block script %}
+    <script src="{{url_for('static', filename='loadingIcon.js')}}"></script>
+    {% endblock %}
+  </div>
+</div>
+
+
+  

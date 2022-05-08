@@ -1,0 +1,25 @@
+<div class="page-container" style="display: flex; justify-content: center;">
+  <div class="page-body" 
+    style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <h1>Deal Catnip</h1>
+    <form method="POST" action="/transfer"
+      style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div style="display: flex; justify-content: center; align-items: flex-end; flex-direction: column;">
+      <p>  From:   <input name="from" /> </p>
+      <p>    To:     <input name="to" /> </p>
+      <p>Amount: <input name="amount" /></p>
+      </div>
+      <p><input type="submit" id="submit" value="Transfer"></p>
+      </pre>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    </form>
+    <div id="loading-cat" 
+      style="display: none; justify-content: center;" >
+      <img src="{{url_for('static', filename='loading-cat.gif')}}" style="width:100px; height:100px;"/>
+    </div>
+    {% block script %}
+    <script src="{{url_for('static', filename='loadingIcon.js')}}"></script>
+    {% endblock %}
+    <p><a href="/dashboard">Back to Dashboard</a></p>
+  </div>
+</div>
