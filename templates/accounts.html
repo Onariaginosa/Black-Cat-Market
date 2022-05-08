@@ -1,0 +1,11 @@
+<div class="page-container" style="display: flex; justify-content: center;">
+  <div class="page-body" 
+    style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <h1>Here are your Stockpiles, {{user}}</h1>
+    {% for account in accounts %} 
+    <p><a href="/details?account={{account}}">Stockpile {{account}} details</a></p>
+    {% endfor %}
+    <hr />
+    <p><a href="/dashboard">Back to Dashboard</a></p>
+  </div>
+</div>
