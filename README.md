@@ -1,4 +1,4 @@
-# Welcome to the Black Cat Market ![kitty cat](static/loading-cat.png)
+# Welcome to the Black Cat Market <img src="static/loading-cat.gif" width="48">
 
 This is a black market web application for the cats in the film Cats (2019).
 In this applications Cats can operate within the black cat market, dealing catnip to other black cats, or simply checking up on their stockpiles.
